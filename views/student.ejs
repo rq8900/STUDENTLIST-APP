@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>Student Details</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="/">Student List App</a>
+
+<ul class="navbar-nav">
+
+<li class="nav-item">
+
+<a class="nav-link" href="/addStudent">
+
+Add new student
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<div class="container mt-4">
+
+<h2>Student Details</h2>
+
+<% if(student){ %>
+
+<p><b>Name:</b> <%= student.name %></p>
+
+<p>
+
+<b>Image:</b><br>
+
+<img src="<%= student.image %>" width="150">
+
+</p>
+
+<p><b>Date of Birth:</b> <%= student.dob.toDateString() %></p>
+
+<p><b>Contact:</b> <%= student.contact %></p>
+
+<% } else { %>
+
+<p>Student not found.</p>
+
+<% } %>
+
+<a href="/">Back</a>
+
+</div>
+
+</body>
+
+</html>
