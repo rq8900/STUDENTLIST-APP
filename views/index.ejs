@@ -66,7 +66,7 @@
 <tr>
 <th>Student Name</th>
 <th>Student Image</th>
-<th>Dob</th>
+<th>Date of Birth</th>
 <th>Contact</th>
 <th>Edit</th>
 <th>Delete</th>
@@ -92,7 +92,7 @@
 
 <td>
 
-<img src="<%= student.image %>" width="60">
+<img src="/images/<%= student.image %>" width="80">
 
 </td>
 
@@ -109,16 +109,24 @@
 </td>
 
 <td>
-    <a href="/editStudent/<%= student.studentId %>">
-        Edit
-    </a>
+
+<a href="/editStudent/<%= student.studentId %>">
+
+Edit
+
+</a>
+
 </td>
 
 <td>
-    <a href="/deleteStudent/<%= student.studentId %>"
-       onclick="return confirm('Are you sure you want to delete this student?')">
-        Delete
-    </a>
+
+<a href="/deleteStudent/<%= student.studentId %>"
+onclick="return confirm('Are you sure you want to delete this student?')">
+
+Delete
+
+</a>
+
 </td>
 
 </tr>
