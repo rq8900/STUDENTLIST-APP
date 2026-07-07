@@ -51,7 +51,7 @@
 
           <div class="card-body">
 
-            <form action="/editStudent/<%= student.studentId %>" method="POST">
+            <form action="/editStudent/<%= student.studentId %>" method="POST" enctype="multipart/form-data"></form>
 
               <div class="mb-3">
                 <label for="name" class="form-label">
@@ -96,17 +96,34 @@
               </div>
 
               <div class="mb-4">
-                <label for="image" class="form-label">
+                <label class="form-label">Current Image</label><br>
+
+                <img src="/images/<%= student.image %>" width="120"><br><br>
+
+                <input
+                  type="hidden" name="currentImage" value="<%= student.image %>">
+
+                <label class="form-label">New Image</label>
+
+                <input type="file" class="form-control" name="image" accept="image/*">
                   Image
                 </label>
 
                 <input
-                  type="text"
+                  type="file"
                   class="form-control"
                   id="image"
                   name="image"
-                  value="<%= student.image %>"
-                  required>
+                  accept="image/*">
+
+                <input
+                  type="hidden"
+                  name="currentImage"
+                  value="<%= student.image %>">
+
+                <div class="mt-2">
+                  <img src="/images/<%= student.image %>" width="150" alt="Current Image">
+                </div>
               </div>
 
               <div class="d-grid gap-2">

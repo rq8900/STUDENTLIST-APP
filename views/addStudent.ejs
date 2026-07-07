@@ -53,7 +53,7 @@
 
 <div class="card-body">
 
-<form action="/addStudent" method="POST">
+<form action="/addStudent" method="POST" enctype="multipart/form-data">
 
 <div class="mb-3">
 
@@ -83,7 +83,12 @@
 
 <label>Image</label>
 
-<input type="text" class="form-control" name="image" required>
+<input
+    type="file"
+    class="form-control"
+    name="image"
+    accept="image/*"
+    required>
 
 </div>
 
